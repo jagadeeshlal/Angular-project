@@ -1,0 +1,146 @@
+@import "~src/sass/main";
+.whatwe-do {
+    @extend .flex-column;
+    padding: 0px 15px;
+    .left-color {
+        background-color: #f9f9f9;
+        @extend .flex-column;
+        @extend .justify-center;
+    }
+    .right-color {
+        background-color: #eef2f5;
+        @extend .flex-column;
+        @extend .justify-center;
+    }
+    &__left {
+        @extend .flex-column;
+        padding: 40px;
+        @include respond-to(mobile) {
+            padding: 20px 0;
+        }
+        @include respond-to(tablet) {
+            padding: 20px 0;
+        }
+        .home-heading {
+            @extend .flex-column;
+            text-align: left;
+            h3 {
+                font-size: 50px;
+                line-height: 58px;
+                margin: 0;
+                color: $theam-dark;
+                font-family: $heading-stack;
+                font-weight: 800;
+                text-transform: uppercase;
+                text-align: left;
+                @include respond-to(mobile) {
+                    font-size: 26px;
+                    line-height: 26px;
+                    text-align: center;
+                }
+                @include respond-to(tablet) {
+                    font-size: 30px;
+                    line-height: 26px;
+                    text-align: center;
+                }
+            }
+        }
+        .home-content {
+            display: block;
+            padding-top: 10px;
+            p {
+                margin: 0;
+            }
+        }
+        .home-btn {
+            display: block;
+            margin-top: 30px;
+            @include respond-to(mobile) {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            @include respond-to(tablet) {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            a {
+                position: relative;
+                font-family: $heading-stack;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 16px;
+                padding: 0 30px;
+                color: $text-color;
+                &:after,
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 12px 16px 2px;
+                    border-color: transparent transparent $theam-red transparent;
+                }
+                &:before {
+                    @include transform(rotate(0deg));
+                    left: 0;
+                    bottom: 3px
+                }
+                &:after {
+                    @include transform(rotate(180deg));
+                    right: 0;
+                    top: 3px;
+                }
+            }
+        }
+    }
+    &__right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 20px 5px;
+        @include respond-to(mobile) {
+            padding: 10px 0;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include respond-to(tablet) {
+            padding: 10px 0;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .what-do__block {
+            @extend .flex-column;
+            &--header {
+                @extend .flexbox;
+                @extend .item-center;
+                padding-bottom: 5px;
+                span {
+                    @extend .flexbox;
+                    @extend .item-center;
+                    flex: 0 auto;
+                    width: 60px;
+                    height: 60px;
+                    overflow: hidden;
+                    margin-right: 20px;
+                }
+                h3 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 18px;
+                    @include respond-to(mobile) {
+                        font-size: 16px;
+                    }
+                    @include respond-to(tablet) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &--content {
+                @extend .flex-column;
+                p {
+                    margin-bottom: 0px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<header class="header" id="#header-global">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand fact-link " (click)="routeTo('home')">
+        <span class="logo-image">
+          <svg class="factweavers-logo" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 8479.6 1753.7" style="enable-background:new 0 0 8479.6 1753.7;" xml:space="preserve">
+            <g>
+              <g>
+                <path class="icon-path" d="M1642.5,1422.4l-466.4-370.5c12.3-31.4,22-63.9,29-97.3l-106.6,12.2c-53.5,192.1-218.8,342.2-429.1,366.2
+			c-276.9,31.7-527.3-167.2-558.9-444.2C78.8,612,277.7,361.7,554.6,330c79.3-9.1,156.4,0.8,226.8,25.9l178.4-20.4
+			c-117-82.1-263.4-123.4-416.6-105.8c-332.4,38-571,338.4-533,670.7c38,332.4,338.4,571,670.7,533
+			c101.9-11.7,194.8-48.1,273.7-102.4l466.2,370.4l-0.1,0.1c35.9,29,82.8,44.3,132.2,38.7c97.8-11.2,167.9-99.5,156.8-197.3
+			c-5.7-49.5-31.1-91.7-67.5-120.1L1642.5,1422.4z M1542.8,1651.6c-25,2.9-48.5-5.1-66.6-20l-450.7-358.2
+			c43.5-40.9,80.9-87.8,110.8-139.6l450.8,358.3l-0.4,0.4c18.5,14.3,31.6,35.4,34.5,60.4C1626.8,1601.9,1591.6,1646,1542.8,1651.6z
+			 M640,421.1c-258.8,9.5-460.8,227-451.2,485.7c0.7,18.5,16.2,32.9,34.7,32.2c18.5-0.7,32.9-16.2,32.2-34.7
+			C247.6,682.6,420.7,496.2,642.5,488c18.4-0.7,32.9-16.2,32.2-34.7C674,434.9,658.5,420.4,640,421.1z" />
+                <g>
+                  <rect id="XMLID_1_" x="569.1" y="596.1" class="icon-shape" width="402.2" height="402.2" />
+                  <rect id="XMLID_2_" x="1109.1" y="629.9" class="icon-shape" width="273.3" height="273.3" />
+                  <rect id="XMLID_3_" x="971.3" y="243.7" class="icon-shape" width="274.4" height="274.4" />
+                  <rect id="XMLID_4_" x="728.3" y="3.8" class="icon-shape" width="188.5" height="188.5" />
+                  <rect id="XMLID_5_" x="1390.6" y="243.7" class="icon-shape" width="124.7" height="124.7" />
+                </g>
+              </g>
+              <text id="XMLID_6_" transform="matrix(1 0 0 1 1894.8199 1621.3134)" class="logo-tagline">Weaving Big Data
+                Solutions</text>
+              <g>
+                <text id="XMLID_7_" transform="matrix(1 0 0 1 1894.8199 1172.412)" class="logo-text text-dark">fact</text>
+                <text transform="matrix(1 0 0 1 3960.2871 1176.4088)" class="logo-text text-red">weavers</text>
+              </g>
+            </g>
+          </svg>
+        </span>
+        <span class="logo-loader">
+          <img src="../../../assets/img/logo-loader.gif" />
+        </span>
+      </a>
+
+      <a class="navbar-toggler" (click)="handleOpen()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li [ngClass]="current === 'home' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link" (click)="routeTo('')">Home</a></li>
+          <li [ngClass]="current === 'expertise' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link"
+              (click)="routeTo('expertise')">Expertise</a></li>
+          <li [ngClass]="current === 'approach' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link" (click)="routeTo('approach')">Approach</a></li>
+          <li [ngClass]="current === 'portfolio' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link"
+              (click)="routeTo('portfolio')">Portfolio</a></li>
+          <li [ngClass]="current === 'leadership' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link"
+              (click)="routeTo('leadership')">Leadership</a></li>
+          <li [ngClass]="current === 'career' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link" (click)="routeTo('career')">Career</a></li>
+          <li [ngClass]="current === 'contact' ? 'nav-item active' : 'nav-item'"><a class="nav-link fact-link" (click)="routeTo('contact')">Contact</a></li>
+          <li class="nav-item"><a class="nav-link fact-link" href="/blog">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

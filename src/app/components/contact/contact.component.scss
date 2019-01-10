@@ -1,0 +1,113 @@
+@import "~src/sass/main";
+.contact {
+    @extend .flex-column;
+    .contact-info {
+        display: block;
+        padding: 20px 0 60px 0;
+        h2 {
+            font-size: 32px;
+            color: $theam-dark;
+            line-height: 58px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .row {
+        margin: 0;
+        [class^="col-"],
+        [class*="col-"] {
+            padding: 0;
+            &:last-child {
+                background-color: $gray-color;
+            }
+            .contact-text {
+                @extend .flex-column;
+                .contact-image {
+                    display: block;
+                    max-height: 350px;
+                    overflow: hidden;
+                }
+                .contact-addres {
+                    padding: 30px 0;
+                    p {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    .dt-sc-contact-info {
+                        padding: 0;
+                        font-size: 20px;
+                        font-weight: 300;
+                        i {
+                            color: $text-color;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            .contact-form {
+                padding: 40px 80px;
+                h2 {
+                    font-size: 18px;
+                    color: $theam-dark;
+                    line-height: 24px;
+                    font-weight: 300;
+                    margin-bottom: 30px;
+                }
+                &__list {
+                    @extend .flex-column;
+                    margin: 0;
+                    li {
+                        margin-bottom: 30px;
+                        position: relative;
+                        &:last-child {
+                            margin-bottom: 0;
+                            text-align: center;
+                        }
+                        .form-control {
+                            background-color: transparent !important;
+                            border-color: $gray-dark;
+                            border-style: solid;
+                            font-size: 14px;
+                            font-style: initial;
+                            padding: 0;
+                            border-width: 0 0 2px 0;
+                            @include border-radius(0);
+                        }
+                        .btn {
+                            background-color: $theam-dark;
+                            max-width: 50%;
+                            min-width: 50%;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            color: $white-color;
+                        }
+                        &.required {
+                            color: $theam-red;
+                        }
+                        &.success {
+                            color: $theam-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-map {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $theam-dark;
+        @include opacity (0.5);
+    }
+}

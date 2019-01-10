@@ -1,0 +1,242 @@
+@import "~src/sass/main";
+.approach {
+    @extend .flex-column;
+    .row {
+        padding: 0;
+        [class*="col-"],
+        [class^="col-"] {
+            margin: 0;
+        }
+    }
+    .approach-header {
+        flex: 0 auto;
+        padding-bottom: 60px !important;
+        padding-top: 40px !important;
+        background-color: transparent !important;
+        @extend .flex-column;
+        h2 {
+            font-size: 32px;
+            color: $theam-dark;
+            line-height: 58px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .card {
+        @extend .flex-column;
+        margin: 0;
+        background-color: $gray-color;
+        min-height: 100%;
+        .approach-image {
+            @extend .flexbox;
+            @extend .all-center;
+            position: relative;
+            margin: 0;
+            &:before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: transparent;
+                z-index: 2;
+                @include transition (all 0.8s ease-in-out);
+            }
+            span {
+                overflow: hidden;
+                max-height: 220px;
+                display: block;
+                img {
+                    @include transition (all 0.8s ease-in-out);
+                }
+            }
+            h3 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                color: $white-color;
+                z-index: 9;
+                @include transform(translate(-50%, -50%));
+            }
+            &:hover {
+                margin: 0;
+                img {
+                    @include transform(scale(1.1));
+                    @include transition (all 0.8s ease-in-out);
+                }
+                &:before {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    @include transition (all 0.8s ease-in-out);
+                }
+                h3 {
+                    opacity: 1;
+                }
+            }
+        }
+        .approach-text {
+            padding: 0 20px;
+            h3 {
+                font-size: 22px;
+                font-weight: 300;
+                margin-top: 30px;
+                text-transform: uppercase;
+            }
+            p {
+                font-style: 14px;
+                line-height: 22px;
+            }
+            &__list {
+                margin-top: 20px;
+                li {
+                    position: relative;
+                    padding: 8px 0 8px 20px;
+                    &:before {
+                        content: '\f00c';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        color: #3bb18f;
+                        font-family: "FontAwesome";
+                        font-size: 12px;
+                        @include transform(translate(0, -50%));
+                    }
+                }
+            }
+        }
+    }
+}
+
+.approach-project {
+    @extend .flex-column;
+    height: 300px;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(/assets/img/approach-footer.jpg);
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-color: $theam-dark;
+        @include opacity(0.4);
+    }
+    background-size: cover;
+    .approach-foot-list {
+        height: 300px;
+        @extend .flexbox;
+        @extend .all-center;
+        li {
+            flex: 0 auto;
+            margin: 0 40px;
+            span {
+                display: block;
+                color: $white-color;
+                text-align: center;
+                &:first-child {
+                    font-size: 80px;
+                    font-weight: 700;
+                    line-height: 70px;
+                }
+                &:last-child {
+                    font-size: 26px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+    .approach-foot-video {
+        width: 100%;
+        position: relative;
+        height: 300px;
+        background-image: url(/assets/img/approach-video-bg.jpg);
+        background-size: cover;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            background-color: $theam-red;
+            @include opacity(0.5);
+        }
+        .text-block {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 8;
+            @extend .flexbox;
+            @extend .all-center;
+            @extend .direction-col;
+            .play-btn {
+                position: relative;
+                width: 70px;
+                height: 70px;
+                overflow: hidden;
+                cursor: pointer;
+                border: solid 2px $white-color;
+                @include border-radius(50%);
+                &:before {
+                    content: '';
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    left: 3px;
+                    top: 3px;
+                    z-index: 5;
+                    background-color: $white-color;
+                    @include opacity(0.8);
+                    @include border-radius(50%);
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 55%;
+                    top: 50%;
+                    z-index: 6;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 12px 0 12px 20px;
+                    border-color: transparent transparent transparent $theam-red;
+                    @include transform(translate(-50%, -50%));
+                }
+            }
+            h3 {
+                font-size: 20px;
+                color: $white-color;
+                text-transform: uppercase;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.modal {
+    margin: 0;
+    .modal-dialog {
+        max-width: 700px;
+        .modal-content {
+            background-color: transparent;
+            @include border-radius(0);
+            .modal-body {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}

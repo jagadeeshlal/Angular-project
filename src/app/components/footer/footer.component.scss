@@ -1,0 +1,152 @@
+@import "~src/sass/main";
+.footer {
+    padding: 80px 0 0 0;
+    position: relative;
+    @include linear-gradient(to top, ($gradient-bg));
+    .container-fluid {
+        padding: 0 15%;
+        @include respond-to(mobile) {
+            padding: 0px 15px;
+        }
+        @include respond-to(tablet) {
+            padding: 0px 15px;
+        }
+    }
+    &-logo {
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(nowrap);
+        @include justify-content(center);
+        @include align-items(center);
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 40%;
+            top: 50%;
+            background-color: #e9ebef;
+            @include transform(translate(0, -50%));
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0
+        }
+        .logo-icon {
+            flex: 0 auto;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            overflow: hidden;
+            border: solid #e9ebef 1px;
+            @include border-radius(50%);
+            svg {
+                width: 100%;
+                height: 100%;
+                .icon-path {
+                    fill: $theam-dark;
+                }
+                .icon-shape {
+                    fill: $theam-red;
+                }
+            }
+        }
+    }
+    &-project {
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(nowrap);
+        @include justify-content(center);
+        @include align-items(center);
+        padding: 8px 0;
+        margin-bottom: 30px;
+        margin-top: 8px;
+        a {
+            flex: 0 auto;
+            padding: 8px 20px;
+            border: solid #e9ebef 1px;
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            color: #767778;
+        }
+    }
+    &-link {
+        @include flexbox();
+        @include flex-direction(column);
+        &__block {
+            display: block;
+            h3 {
+                font-size: 22px;
+                color: $text-color;
+                margin-bottom: 20px;
+            }
+            p {
+                margin: 28px 0 0 0;
+                line-height: 22px;
+            }
+            .project-link {
+                display: block;
+                margin-top: 20px;
+                color: #8c8c8c;
+                &:hover {
+                    color: $theam-red;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                @extend .flexbox;
+                @extend .all-center;
+                @extend .wrap-item;
+                li {
+                    flex: 1 50%;
+                    width: 50%;
+                    padding: 0 8px;
+                    a {
+                        border-bottom: solid #e9ebef 1px;
+                        display: block;
+                        padding: 8px 0;
+                        color: #8c8c8c;
+                        cursor: pointer;
+                        &:hover {
+                            color: $theam-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-copyright {
+        @include flexbox();
+        @include flex-direction(column);
+        padding: 20px 15%;
+        border-top: solid #e9ebef 1px;
+        margin-top: 20px;
+        ul {
+            @extend .flexbox;
+            @extend .item-center;
+            @extend .item-end;
+            margin: 0;
+            padding: 0;
+            li {
+                flex: 0 auto;
+                margin-right: 20px;
+                color: #bbbbbb;
+                &:first-child {
+                    margin-right: auto;
+                }
+                small,
+                a {
+                    color: #bbbbbb;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

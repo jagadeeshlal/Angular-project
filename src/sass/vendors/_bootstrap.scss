@@ -1,0 +1,10 @@
+@import "../helpers/mixins";
+.container-fluid {
+    padding: 0px 50px;
+    @include respond-to(mobile) {
+        padding: 0px 15px;
+    }
+    @include respond-to(tablet) {
+        padding: 0px 15px;
+    }
+}

@@ -1,0 +1,120 @@
+@import "~src/sass/main";
+.testimonial {
+    @extend .flex-column;
+    padding: 60px 0;
+    @include respond-to(mobile) {
+        padding: 30px 0;
+    }
+    @include respond-to(tablet) {
+        padding: 30px 0;
+    }
+    .container-fluid {
+        max-width: 80%;
+        margin: 0 auto;
+        @include respond-to(mobile) {
+            max-width: 100%;
+        }
+        @include respond-to(tablet) {
+            max-width: 100%;
+        }
+        .home-heading {
+            @extend .flex-column;
+            @extend .all-center;
+            padding-bottom: 60px;
+            @include respond-to(mobile) {
+                padding-bottom: 20px;
+            }
+            @include respond-to(tablet) {
+                padding-bottom: 20px;
+            }
+            h3 {
+                font-size: 50px;
+                line-height: 58px;
+                margin: 0;
+                color: $theam-dark;
+                font-family: $heading-stack;
+                font-weight: 800;
+                text-transform: uppercase;
+                text-align: center;
+                @include respond-to(mobile) {
+                    font-size: 26px;
+                    line-height: 26px;
+                    text-align: center;
+                    font-family: $heading-stack;
+                }
+                @include respond-to(tablet) {
+                    font-size: 30px;
+                    line-height: 26px;
+                    text-align: center;
+                    font-family: $heading-stack;
+                }
+            }
+        }
+        .testimonial-block {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            @include respond-to(mobile) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @include respond-to(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            &__item {
+                grid-column: auto;
+                grid-row: auto;
+                padding: 20px;
+                border: $gray-color 1px solid;
+                @include transition (all 0.6s ease-in-out);
+                @include box-shadow(0, 0px, 9px, rgba(0, 0, 0, 0.04));
+                .testimonial-body {
+                    @extend .flex-column;
+                    @extend .all-center;
+                    &__content {
+                        margin: 0;
+                        text-align: center;
+                        min-height: 140px;
+                        p {
+                            margin: 0;
+                            line-height: 22px;
+                        }
+                    }
+                    &__profile {
+                        @extend .flex-column;
+                        @extend .all-center;
+                        .image-block {
+                            margin-top: 20px;
+                            text-align: center;
+                            margin-bottom: 12px;
+                            span {
+                                display: inline-block;
+                                overflow: hidden;
+                                width: 80px;
+                                height: 80px;
+                                padding: 2px;
+                                border: solid 2px #cdd2d5;
+                                @include border-radius(50%);
+                                img {
+                                    width: 100%;
+                                    @include border-radius(50%);
+                                }
+                            }
+                        }
+                        h3 {
+                            font-size: 16px;
+                            font-weight: 500;
+                            margin: 0;
+                            text-align: center;
+                        }
+                        h4 {
+                            font-size: 14px;
+                            font-weight: 500;
+                            margin: 0;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

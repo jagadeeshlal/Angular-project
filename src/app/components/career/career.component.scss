@@ -1,0 +1,69 @@
+@import "~src/sass/main";
+.career {
+    @extend .flex-column;
+    .career-header {
+        margin: 50px 0 90px 0;
+        h2 {
+            font-size: 32px;
+            color: $theam-dark;
+            line-height: 58px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .career-content {
+        margin: 0;
+        .career-list {
+            margin: 0;
+            ul {
+                margin: 0;
+                li {
+                    @extend .flexbox;
+                    @extend .item-center;
+                    margin: 15px 0;
+                    border-bottom: solid 1px $gray-color;
+                    padding-bottom: 30px;
+                    .list-left {
+                        flex: 1 auto;
+                        padding-right: 40px;
+                        h2 {
+                            font-size: 26px;
+                            font-weight: 300;
+                        }
+                        h3 {
+                            font-size: 22px;
+                            font-weight: 300;
+                        }
+                        p {
+                            padding: 0;
+                            margin: 0;
+                            margin-bottom: 12px;
+                            font-size: 14px;
+                            &.career-qul {
+                                padding-top: 15px;
+                                span {
+                                    border: solid 1px $gray-color;
+                                    padding: 4px 10px;
+                                    background-color: $gray-color;
+                                }
+                            }
+                        }
+                    }
+                    .list-btn {
+                        flex: 0 auto;
+                        a {
+                            border: solid 1px $theam-red;
+                            padding: 8px 40px;
+                            display: inline-block;
+                            color: $text-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import "~src/sass/main";
+.about {
+    @extend .flex-column;
+    padding: 80px 0;
+    @include respond-to(mobile) {
+        padding: 30px 0;
+    }
+    @include respond-to(tablet) {
+        padding: 30px 0;
+    }
+    &-inner {
+        flex: 1 auto;
+        max-width: 75%;
+        margin: 0 auto;
+        @include respond-to(mobile) {
+            max-width: 100%;
+        }
+        @include respond-to(tablet) {
+            max-width: 100%;
+        }
+        p {
+            font-size: 20px;
+            color: $text-color;
+            text-align: center;
+        }
+    }
+}

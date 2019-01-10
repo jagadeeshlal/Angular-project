@@ -1,0 +1,20 @@
+ @import "~src/sass/main";
+ .iframe-container {
+     overflow: hidden;
+     height: 100vh;
+     position: relative;
+     @include flexbox();
+     @include flex-direction(row);
+     @include flex-wrap(nowrap);
+     @include align-items(center);
+     @include justify-content(center);
+ }
+
+ .iframe-container iframe {
+     border: 0;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+ }

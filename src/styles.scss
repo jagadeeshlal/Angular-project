@@ -1,0 +1,295 @@
+/* 
+factweavers.com Reset Stylesheet
+v2.0.1
+Last Updated: 2018-November
+Author: Jagadeeshlal - jagadeeshlal@factweavers.com 
+*/
+
+@import "sass/main";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    line-height: 1.428;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-color;
+    background-color: $white-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 300;
+}
+
+img {
+    border: 0;
+    outline: 0;
+    max-width: 100%;
+    display: inline-block;
+}
+
+a,
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    outline: 0;
+    &:focus,
+    &:hover,
+    &:active {
+        outline: 0;
+        @include box-shadow(0, 0, 0, transparent !important);
+        @include transition (all 0.8s ease-in-out !important);
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover,
+    &:visited,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: rgb(255, 255, 255) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.loading {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: $white-color;
+    z-index: 9999;
+}
+
+.main-wrapper {
+    @include flexbox();
+    @include flex-direction(column);
+    .home-block {
+        .header {
+            margin: 0;
+            .navbar-brand {
+                padding: 0;
+                .factweavers-logo {
+                    margin: 0;
+                    .icon-path,
+                    .icon-shape,
+                    .logo-tagline {
+                        fill: $white-color !important;
+                    }
+                    .logo-text {
+                        margin: 0;
+                        &.text-dark,
+                        &.text-red {
+                            fill: $white-color !important;
+                        }
+                    }
+                }
+            }
+            .navbar-toggler {
+                margin: 0;
+                span {
+                    margin: 0;
+                    @include respond-to(mobile) {
+                        background-color: $white-color !important;
+                    }
+                    @include respond-to(tablet) {
+                        background-color: $white-color !important;
+                    }
+                }
+            }
+            .nav-link {
+                color: $white-color !important;
+                &:before {
+                    background-color: $white-color !important;
+                }
+            }
+            &.fixed-top {
+                margin: 0;
+                .navbar-toggler {
+                    margin: 0;
+                    span {
+                        margin: 0;
+                        @include respond-to(mobile) {
+                            background-color: $theam-dark !important;
+                        }
+                        @include respond-to(tablet) {
+                            background-color: $theam-dark !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .inner-block {
+        display: block;
+        margin: 0;
+        .banner {
+            @include flexbox();
+            @include flex-direction(column);
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            overflow: hidden;
+            .hero-banner-inner {
+                position: relative;
+                z-index: 9;
+                padding-top: 100px;
+                padding-bottom: 20px;
+                @include respond-to(mobile) {
+                    padding-top: 110px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @include respond-to(tablet) {
+                    padding-top: 125px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                h1 {
+                    text-align: center;
+                    color: $theam-dark;
+                    font-size: 60px;
+                    padding-top: 19px;
+                    line-height: 70px;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    margin: 0;
+                    @include respond-to(mobile) {
+                        font-size: 34px;
+                        padding-top: 10px;
+                        line-height: 40px;
+                    }
+                    @include respond-to(tablet) {
+                        font-size: 36px;
+                        padding-top: 10px;
+                        line-height: 40px;
+                    }
+                }
+                h2 {
+                    text-align: center;
+                    color: #9a9da3;
+                    font-size: 22px;
+                    font-weight: 300;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin: 0;
+                    @include respond-to(mobile) {
+                        font-size: 18px;
+                    }
+                    @include respond-to(tablet) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .inner-content {
+            @include flexbox();
+            @include flex-direction(column);
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.top-scroll {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9;
+    cursor: pointer;
+    background-color: $theam-dark;
+    @include border-radius(50%);
+    i {
+        display: none;
+    }
+    &:after,
+    &:before {
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        @include transform(translate(-50%, 0));
+    }
+    &:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: $theam-dark;
+        border-width: 5px;
+        top: 8px !important;
+    }
+    &:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-bottom-color: $white-color;
+        border-width: 8px;
+        top: 2px !important;
+    }
+}
+
+.home-content {
+    @include flexbox();
+    @include flex-direction(column);
+    max-width: 85%;
+    @include respond-to(mobile) {
+        max-width: 100%;
+    }
+    @include respond-to(tablet) {
+        max-width: 100%;
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.carousel {
+    margin: 0;
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: auto !important;
+        height: auto !important;
+    }
+    .carousel-indicators {
+        bottom: 0px;
+        .ng-star-inserted {
+            background-color: $theam-gray;
+            @include opacity(0.5);
+            &.active {
+                background-color: $theam-red;
+                @include opacity(1);
+            }
+        }
+    }
+}
+
+.testimonial {
+    margin: 0;
+    .carousel {
+        margin: 0;
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
+    }
+}

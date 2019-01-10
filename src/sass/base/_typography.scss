@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:200i,400,500,600,700,800,900);
+$heading-stack:'Kanit',
+sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
+$font-stack: 'Roboto',
+sans-serif;
+$thin :100;
+$light :300;
+$regular :400;
+$medium :500;
+$bold :700;
+$black :900;
+/*---------Logo font-----------*/
+@include font-face('factweavers', '/assets/fonts/factweavers-logo');
+@include font-face('tagline', '/assets/fonts/factweavers-tagline');

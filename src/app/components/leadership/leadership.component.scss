@@ -1,0 +1,82 @@
+@import "~src/sass/main";
+.leadership {
+    padding: 80px 0;
+    &__header {
+        margin: 10px 0 60px 0;
+        h2 {
+            font-size: 32px;
+            color: $theam-dark;
+            line-height: 58px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &__content {
+        padding: 0;
+        margin-top: 40px;
+        border-bottom: solid 1px $gray-color;
+        padding-bottom: 30px;
+        &:last-child {
+            border-bottom: 0;
+        }
+        .leader-image {
+            width: 100%;
+            text-align: center;
+            span {
+                @extend .flexbox;
+                @extend .all-center;
+                border: solid 3px $gray-color;
+            }
+        }
+        .leader-content {
+            margin: 0;
+            h3 {
+                font-size: 26px;
+                font-weight: 300;
+            }
+            p {
+                padding: 0;
+                margin-bottom: 12px;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            .author {
+                margin-top: 10px;
+                @extend .flexbox;
+                @extend .item-center;
+                &__left {
+                    flex: 0 auto;
+                    .author-book {
+                        @extend .flexbox;
+                        @extend .all-center;
+                        width: 100px;
+                        height: 100px;
+                        overflow: hidden;
+                        padding: 0;
+                        border: 3px $gray-color solid;
+                        @include border-radius(50%);
+                        img {
+                            @include border-radius(50%);
+                            width: 100%;
+                        }
+                    }
+                }
+                &__right {
+                    flex: 1 auto;
+                    padding-left: 30px;
+                    h4 {
+                        font-size: 22px;
+                        font-weight: 300;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

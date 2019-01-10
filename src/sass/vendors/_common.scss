@@ -1,0 +1,66 @@
+@import "../helpers/mixins";
+.flex-column {
+    @include flexbox();
+    @include flex-direction(column);
+    @include flex-wrap(nowrap);
+}
+
+.flexbox {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include justify-content(flex-start);
+    @include align-items(flex-start);
+}
+
+.wrap-item {
+    @include flex-wrap(wrap);
+}
+
+.all-center {
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.direction-row {
+    @include flex-direction(row);
+}
+
+.direction-col {
+    @include flex-direction(column);
+}
+
+.justify-center {
+    @include justify-content(center);
+}
+
+.justify-between {
+    @include justify-content(space-between);
+}
+
+.justify-around {
+    @include justify-content(space-around);
+}
+
+.justify-end {
+    @include justify-content(flex-end);
+}
+
+.item-stretch {
+    @include align-items(stretch);
+}
+
+.item-center {
+    @include align-items(center);
+}
+
+.item-end {
+    @include align-items(flex-end);
+}
+
+.particles-container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1 !important;
+}

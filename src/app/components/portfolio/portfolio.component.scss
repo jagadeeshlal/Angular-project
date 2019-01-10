@@ -1,0 +1,108 @@
+@import "~src/sass/main";
+.portfolio {
+    padding: 0;
+    &__header {
+        margin: 45px 90px 90px 90px;
+        @include respond-to(mobile) {
+            margin: 20px 15px 30px 15px;
+        }
+        @include respond-to(tablet) {
+            margin: 20px 15px 30px 15px;
+        }
+        h2 {
+            font-size: 32px;
+            color: $theam-dark;
+            line-height: 58px;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    &__content {
+        position: relative;
+        padding: 0px 90px 90px 90px;
+        @include respond-to(mobile) {
+            padding: 0 15px 30px 15px;
+        }
+        @include respond-to(tablet) {
+            padding: 0 15px 30px 15px;
+        }
+        .row {
+            margin: 0;
+            padding: 0;
+            [class^="col-"],
+            [class*="col-"] {
+                padding: 0;
+                margin: 0;
+                background: $gray-color;
+                &:nth-child(even) {
+                    @include respond-to(mobile) {
+                        .portfolio-box {
+                            margin: 0;
+                            &__image {
+                                order: 1 !important;
+                            }
+                        }
+                    }
+                    @include respond-to(tablet) {
+                        .portfolio-box {
+                            margin: 0;
+                            &__image {
+                                order: 1 !important;
+                            }
+                        }
+                    }
+                }
+                .portfolio-box {
+                    @extend .flex-column;
+                    &__image {
+                        cursor: pointer;
+                        position: relative;
+                        flex: 1 auto;
+                        figure {
+                            margin: 0;
+                            @extend .flexbox;
+                            overflow: hidden;
+                            img {
+                                display: inline-block;
+                                width: 100%;
+                                @include transition (all 0.8s ease-in-out);
+                            }
+                        }
+                    }
+                    &__content {
+                        flex: 1 auto;
+                        padding: 40px;
+                        background: $gray-color;
+                        border-top: 1px solid $gray-color;
+                        h6 {
+                            font-size: 18px;
+                            font-weight: 300;
+                            padding: 0px;
+                            margin: 0 0 10px 0;
+                        }
+                        p {
+                            font-size: 14px;
+                            line-height: 20px;
+                            padding: 0px;
+                            margin: 0;
+                        }
+                    }
+                    &:hover {
+                        margin: 0;
+                        figure {
+                            margin: 0;
+                            img {
+                                @include transform(scale(1.2));
+                                @include transition (all 0.8s ease-in-out);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
